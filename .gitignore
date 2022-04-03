@@ -8,8 +8,9 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 
-# ignore these plugins
-wp-content/plugins/hello.php
+# ignore all plugins, except specific plugins
+plugins/*
+!/plugins/landing-pages/
 
 # ignore specific themes
 wp-content/themes/twenty*/
