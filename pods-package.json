@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "version": "2.8.10",
+        "build": 1649069713
+    },
+    "pods": [
+        {
+            "name": "model_lp",
+            "id": 9,
+            "label": "Modelos de LP",
+            "description": "",
+            "type": "post_type",
+            "storage": "meta",
+            "label_singular": "Modelo de LP",
+            "public": "1",
+            "show_ui": "1",
+            "rest_enable": "1",
+            "supports_title": "1",
+            "supports_editor": "1",
+            "_migrated_28": "1",
+            "publicly_queryable": "1",
+            "exclude_from_search": "1",
+            "capability_type": "custom",
+            "capability_type_custom": "model_lp",
+            "capability_type_extra": "1",
+            "has_archive": "0",
+            "hierarchical": "0",
+            "rewrite": "1",
+            "rewrite_with_front": "1",
+            "rewrite_feeds": "0",
+            "rewrite_pages": "1",
+            "query_var": "1",
+            "can_export": "1",
+            "default_status": "draft",
+            "revisions_to_keep_limit": "0",
+            "delete_with_user": "1",
+            "show_in_menu": "1",
+            "menu_icon": "dashicons-portfolio",
+            "write_all": "0",
+            "read_all": "1",
+            "groups": [
+                {
+                    "name": "mais_campos",
+                    "id": 10,
+                    "label": "Mais Campos",
+                    "description": "",
+                    "weight": 0,
+                    "fields": []
+                }
+            ]
+        }
+    ]
+}
