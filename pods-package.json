@@ -1,7 +1,7 @@
 {
     "meta": {
         "version": "2.8.10",
-        "build": 1649069713
+        "build": 1649070238
     },
     "pods": [
         {
@@ -46,6 +46,86 @@
                     "description": "",
                     "weight": 0,
                     "fields": []
+                }
+            ]
+        },
+        {
+            "name": "seller_lp",
+            "id": 13,
+            "label": "Vendedores",
+            "description": "",
+            "type": "post_type",
+            "storage": "meta",
+            "label_singular": "Vendedor",
+            "public": "1",
+            "show_ui": "1",
+            "rest_enable": "1",
+            "supports_title": "1",
+            "supports_editor": "0",
+            "_migrated_28": "1",
+            "show_in_menu": "1",
+            "menu_position": "0",
+            "show_in_nav_menus": "1",
+            "show_in_admin_bar": "1",
+            "menu_icon": "dashicons-businessman",
+            "required": "0",
+            "publicly_queryable": "1",
+            "exclude_from_search": "0",
+            "capability_type": "post",
+            "capability_type_custom": "vendedor",
+            "capability_type_extra": "1",
+            "has_archive": "0",
+            "hierarchical": "0",
+            "rewrite": "1",
+            "rewrite_with_front": "1",
+            "rewrite_feeds": "0",
+            "rewrite_pages": "1",
+            "query_var": "1",
+            "can_export": "1",
+            "default_status": "draft",
+            "revisions_to_keep_limit": "0",
+            "delete_with_user": "1",
+            "groups": [
+                {
+                    "name": "selle_info",
+                    "id": 14,
+                    "label": "Informa\u00e7\u00f5es do vendedor",
+                    "description": "",
+                    "weight": 0,
+                    "meta_box_context": "normal",
+                    "meta_box_priority": "default",
+                    "roles_allowed": "administrator",
+                    "fields": [
+                        {
+                            "name": "model_lp_relationship",
+                            "id": 15,
+                            "label": "Modelo da Landing Page",
+                            "description": "Selecione o modelo de Landing Page que esse vendedor usar\u00e1",
+                            "weight": 0,
+                            "type": "pick",
+                            "pick_object": "post_type",
+                            "pick_val": "model_lp",
+                            "sister_id": "-- Selecione Um --",
+                            "post_status": "publish",
+                            "pick_table": "-- Selecione Um --",
+                            "required": "0",
+                            "pick_format_type": "single",
+                            "pick_format_single": "dropdown",
+                            "pick_format_multi": "checkbox",
+                            "pick_display_format_multi": "default",
+                            "pick_display_format_separator": ", ",
+                            "pick_allow_add_new": "1",
+                            "pick_taggable": "0",
+                            "pick_show_icon": "1",
+                            "pick_show_edit_link": "1",
+                            "pick_show_view_link": "1",
+                            "pick_limit": "0",
+                            "pick_user_role": "Administrator",
+                            "roles_allowed": "administrator",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1"
+                        }
+                    ]
                 }
             ]
         }
