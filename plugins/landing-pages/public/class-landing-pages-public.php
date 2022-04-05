@@ -100,4 +100,28 @@ class Landing_Pages_Public {
 
 	}
 
+	/**
+	 * Dequeue default stylesheet of the single model_lp
+	 */
+	public function lp_dequeue_stylesheet() {
+		if ( is_singular( 'model_lp' ) ) {
+			wp_dequeue_style( 'twenty-twenty-one-style' );
+		}
+	}
+
+	/**
+	 * Load single template from plugin to single model_lp
+	 */
+	public function lp_template_include( $template ) {
+		global $wp_query;
+		
+		if ( 'model_lp' == get_post_type( $wp_query->post->ID ) ) {
+			if ( is_single( $wp_query->post->ID ) ) {
+				$template = plugin_dir_path( __DIR__ ) . 'templates/single.php';
+			}
+		}
+
+		return $template;
+	}
+
 }

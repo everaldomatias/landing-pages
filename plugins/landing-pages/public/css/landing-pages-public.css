@@ -2,3 +2,32 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+body.single-model_lp {
+    margin: 0;
+}
+
+body.single-model_lp .block-header {
+    /* https://9elements.github.io/fancy-border-radius/#72.0.0.27--445.1980 */
+    border-radius: 0% 100% 73% 27% / 72% 0% 100% 28% ;
+    padding: 0;
+    background-color: #e5e5e5;
+    position: relative;
+    z-index: 10;
+}
+
+body.single-model_lp .block-header .has-background-dim:not([class*="-background-color"]) {
+    background-color: transparent;
+}
+
+body.single-model_lp .block-highlight-1 {
+    margin-top: -220px;
+    position: relative;
+    z-index: 5;
+}
+
+body.single-model_lp .wp-block-cover .wp-block-cover__inner-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+}
