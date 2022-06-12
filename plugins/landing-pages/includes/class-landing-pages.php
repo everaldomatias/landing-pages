@@ -175,8 +175,9 @@ class Landing_Pages {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-		$this->loader->add_filter( 'template_include', $plugin_public, 'lp_template_include' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'lp_dequeue_stylesheet', 11 );
+		$this->loader->add_filter( 'body_class', $plugin_public, 'lp_body_class', 99 );
+		$this->loader->add_filter( 'template_include', $plugin_public, 'lp_template_include', 99 );
 
 	}
 

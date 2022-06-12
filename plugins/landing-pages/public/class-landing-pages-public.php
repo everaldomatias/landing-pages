@@ -110,15 +110,41 @@ class Landing_Pages_Public {
 	}
 
 	/**
-	 * Load single template from plugin to single model_lp
+	 * Add custom body class
+	 */
+	public function lp_body_class( $classes ) {
+
+		if ( is_single() && is_singular( 'seller_lp' ) ) {
+			$model_lp = get_post_meta( get_the_ID(), 'model_lp', true );
+
+			if ( $model_lp ) {
+				$model_lp = str_replace( '_', '-', $model_lp );
+				$classes[] = 'lp-' . esc_attr( $model_lp );
+			}
+		}
+
+		return $classes;
+
+	}
+
+	/**
+	 * Load template of the seller
+	 * @todo Set template default
 	 */
 	public function lp_template_include( $template ) {
-		global $wp_query;
-		
-		if ( 'model_lp' == get_post_type( $wp_query->post->ID ) ) {
-			if ( is_single( $wp_query->post->ID ) ) {
-				$template = plugin_dir_path( __DIR__ ) . 'templates/single.php';
+
+		if ( is_single() && is_singular( 'seller_lp' ) ) {
+			$model_lp = get_post_meta( get_the_ID(), 'model_lp', true );
+
+			if ( $model_lp ) {
+				$model_lp = str_replace( '_', '-', $model_lp );
+				$template_lp = plugin_dir_path( __DIR__ ) . 'templates/' . $model_lp  . '.php';
+
+				if ( file_exists( $template_lp ) ) {
+					return $template_lp;
+				}
 			}
+
 		}
 
 		return $template;
