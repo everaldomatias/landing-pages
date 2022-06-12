@@ -3,8 +3,13 @@
  * included in this file.
  */
 
-body.single-model_lp {
+body.lp-model {
     margin: 0;
+    background-color: yellow;
+
+    h1 {
+        color: red;
+    }
 }
 
 body.single-model_lp .block-header {

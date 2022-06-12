@@ -73,7 +73,7 @@ class Landing_Pages_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/landing-pages-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/css/landing-pages-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -119,7 +119,7 @@ class Landing_Pages_Public {
 
 			if ( $model_lp ) {
 				$model_lp = str_replace( '_', '-', $model_lp );
-				$classes[] = 'lp-' . esc_attr( $model_lp );
+				$classes[] = 'lp-model lp-' . esc_attr( $model_lp );
 			}
 		}
 

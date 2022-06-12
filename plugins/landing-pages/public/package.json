@@ -1,0 +1,15 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "Sass compiler",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+    "prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
+  },
+  "author": "Everaldo Matias <aoseudispor@everaldo.dev>",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.52.3"
+  }
+}
