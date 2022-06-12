@@ -100,4 +100,16 @@ class Landing_Pages_Admin {
 
 	}
 
+	/**
+	 * Admin notices
+	 */
+	public function admin_notices() {
+		if ( ! is_plugin_active( 'pods/init.php' ) ) {
+			$class = 'notice notice-error';
+			$message = __( 'O plugin Landing Pages depende do plugin Pods – Campos e Formatos de Conteúdo Customizados.', 'landing-pages' );
+	
+			printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
+		}
+	}
+
 }
