@@ -36,6 +36,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'LANDING_PAGES_VERSION', '1.0.0' );
+define( 'LANDING_PAGES_PATH', plugins_url( '/', __FILE__ ) );
 
 /**
  * The code that runs during plugin activation.

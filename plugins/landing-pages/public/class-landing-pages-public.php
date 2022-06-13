@@ -73,6 +73,7 @@ class Landing_Pages_Public {
 		 * class.
 		 */
 
+		wp_enqueue_style( 'google-font-outfit', 'https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap', array(), $this->version, false );
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/css/landing-pages-public.css', array(), $this->version, 'all' );
 
 	}
@@ -104,8 +105,9 @@ class Landing_Pages_Public {
 	 * Dequeue default stylesheet of the single model_lp
 	 */
 	public function lp_dequeue_stylesheet() {
-		if ( is_singular( 'model_lp' ) ) {
+		if ( is_singular( 'seller_lp' ) ) {
 			wp_dequeue_style( 'twenty-twenty-one-style' );
+			wp_dequeue_style( 'twentytwenty-style' );
 		}
 	}
 
