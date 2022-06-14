@@ -19,6 +19,7 @@
 		<div class="container">
 			<h1>Seu escritório completo em um só lugar.</h1>
 			<span>Tam sit amet tellus in eros faucibus tempor quis sed ante. Nam id iaculis leo. Aliquam erat volutpat. Integer fringilla dui vel quam sodales suscipit. Proin aliquam pharetra pretium. Phasellus tincidunt elit ut</span>
+			<a class="button" href="#contato">Quero saber mais >></a>
 		</div>
 	</div>
 

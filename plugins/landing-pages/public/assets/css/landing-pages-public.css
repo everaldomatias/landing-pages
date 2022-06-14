@@ -8,6 +8,7 @@
 
 body.lp-model {
   background-color: rgb(105, 105, 105);
+  font-family: "Outfit", sans-serif;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
@@ -69,13 +70,26 @@ body.lp-model .hero h1 {
 }
 body.lp-model .hero span {
   font-size: 1.5rem;
-  font-family: "Outfit", sans-serif;
   font-weight: 200;
 }
 @media (max-width: 783px) {
   body.lp-model .hero span {
     font-size: 1.2rem;
   }
+}
+body.lp-model .hero .button {
+  background-color: #25D366;
+  border-radius: 10px;
+  color: #FFFFFF;
+  display: table;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+body.lp-model .hero .button:hover {
+  background-color: #075E54;
 }
 body.lp-model.logged-in .main-header {
   top: 32px;
