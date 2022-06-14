@@ -23,6 +23,14 @@
 		</div>
 	</div>
 
+	<div id="contato" class="contact">
+		<div class="container">
+			<h2>Fale com nossa equipe</h2>
+			<span>Com apenas um clique entre em contato com nossos atendentes para dúvidas ou orçamentos.</span>
+			<a class="button" href="#whatsapp">WhatsApp</a>
+		</div>
+	</div>
+
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">

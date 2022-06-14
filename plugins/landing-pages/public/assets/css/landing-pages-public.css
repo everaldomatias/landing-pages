@@ -20,14 +20,29 @@ body.lp-model .container {
   padding-left: 15px;
   padding-right: 15px;
 }
+body.lp-model .button {
+  background-color: #25D366;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+body.lp-model .button:hover {
+  background-color: #075E54;
+}
 body.lp-model .main-header {
   background: rgb(250, 250, 250);
   background-color: rgba(255, 255, 255, 0.8);
   padding-bottom: 40px;
   padding-top: 40px;
-  position: sticky;
+  position: fixed;
+  text-align: center;
   top: 0;
   z-index: 1;
+  width: 100%;
 }
 body.lp-model .main-header img {
   max-width: 280px;
@@ -42,7 +57,7 @@ body.lp-model .hero {
   background-position: center;
   background-blend-mode: multiply;
   height: 100vh;
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   display: flex;
@@ -78,18 +93,48 @@ body.lp-model .hero span {
   }
 }
 body.lp-model .hero .button {
-  background-color: #25D366;
-  border-radius: 10px;
-  color: #FFFFFF;
   display: table;
-  font-size: 1.5rem;
-  margin-top: 15px;
-  padding: 15px 30px;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
 }
-body.lp-model .hero .button:hover {
-  background-color: #075E54;
+body.lp-model .contact {
+  background-color: #3b3b3b;
+  background-image: url("../images/contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+body.lp-model .contact .container {
+  color: #FFFFFF;
+  padding-bottom: 140px;
+  padding-top: 80px;
+}
+body.lp-model .contact .container h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+@media (max-width: 783px) {
+  body.lp-model .contact .container h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  body.lp-model .contact .container h2 {
+    max-width: 100%;
+  }
+}
+body.lp-model .contact .container span {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+@media (max-width: 783px) {
+  body.lp-model .contact .container span {
+    font-size: 1.2rem;
+  }
+}
+body.lp-model .contact .container .button {
+  display: table;
 }
 body.lp-model.logged-in .main-header {
   top: 32px;
