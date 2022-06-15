@@ -47,6 +47,32 @@
 		</div>
 	</div>
 
+	<div id="escola" class="school">
+		<div class="container">
+			<h2>Móveis para escola</h2>
+		</div>
+		<div class="wrap-slider">
+			<div class="container">
+				<h3>Conheça nossa linha completa de móveis para ambiente escolar. Solicite nosso catálogo e conheça todos nossos produtos</h3>
+				<div class="glide">
+					<div class="glide__track" data-glide-el="track">
+						<ul class="glide__slides">
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-1.jpg" alt="Móveis para escola"></li>
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-2.jpg" alt="Móveis para escola"> </li>
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-3.jpg" alt="Móveis para escola"> </li>
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-4.jpg" alt="Móveis para escola"> </li>
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-5.jpg" alt="Móveis para escola"> </li>
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-6.jpg" alt="Móveis para escola"> </li>
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-7.jpg" alt="Móveis para escola"> </li>
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-8.jpg" alt="Móveis para escola"> </li>
+							<li class="glide__slide"><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/escola-9.jpg" alt="Móveis para escola"> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="contato" class="contact">
 		<div class="container">
 			<h2>Fale com nossa equipe</h2>

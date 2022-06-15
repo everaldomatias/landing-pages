@@ -30,3 +30,18 @@
 	 */
 
 })( jQuery );
+
+document.addEventListener('DOMContentLoaded', function() {
+	new Glide('.glide', {
+		autoplay: 3000,
+		focusAt: 'center',
+		gap: 15,
+		perView: 3,
+		type: 'carousel',
+		breakpoints: {
+			600: {
+				perView: 2
+			}
+		}
+	}).mount()
+});

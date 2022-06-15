@@ -97,6 +97,7 @@ class Landing_Pages_Public {
 		 * class.
 		 */
 
+		wp_enqueue_script( 'glidejs', plugin_dir_url( __FILE__ ) . 'node_modules/@glidejs/glide/dist/glide.min.js', array(), $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/landing-pages-public.js', array( 'jquery' ), $this->version, false );
 
 	}
