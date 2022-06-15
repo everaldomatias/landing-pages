@@ -102,6 +102,73 @@ body.lp-model {
         }
     }
 
+    .features {
+        background-color: #ffffff;
+        background-image: url('../images/features.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .container {
+            padding-bottom: 80px;
+            padding-top: 60px;
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 200;
+                text-align: center;
+
+                @media (max-width: 600px) {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .columns {
+                display: flex;
+                padding-top: 60px;
+
+                @media (max-width: 600px) {
+                    display: block;
+                }
+
+                .column {
+                    align-items: center;
+                    display: flex;
+                    flex-basis: 33.3333%;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    text-align: center;
+
+                    @media (max-width: 600px) {
+                        margin-bottom: 40px;
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        line-height: 1.2;
+                    }
+
+                    img {
+                        display: inline-block;
+                        max-width: 80px;
+                    }
+
+                    span {
+                        font-weight: 200;
+
+                        @media (max-width: 600px) {
+                            max-width: 360px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
     .contact {
         background-color: #f5f5f5;
         background-image: url('../images/seller.png');

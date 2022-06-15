@@ -23,6 +23,30 @@
 		</div>
 	</div>
 
+	<div id="diferenciais" class="features">
+		<div class="container">
+			<h3>Compondo as melhores propostas, do projeto a escolha dos produtos, da logística de transporte, e entrega e montagem, culminando com um pós venda cuidadoso e presente.</h3>
+
+			<div class="columns">
+				<div class="column">
+					<img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/icon-attendance.png" alt="Atendimento personalizado">
+					<h3>Atendimento<br>personalizado</h3>
+					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+				</div>
+				<div class="column">
+					<img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/icon-price.png" alt="Preço">
+					<h3>Preço</h3>
+					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+				</div>
+				<div class="column">
+					<img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/icon-delivery.png" alt="Logística">
+					<h3>Logística</h3>
+					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="contato" class="contact">
 		<div class="container">
 			<h2>Fale com nossa equipe</h2>

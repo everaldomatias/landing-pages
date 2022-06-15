@@ -95,6 +95,68 @@ body.lp-model .hero span {
 body.lp-model .hero .button {
   display: table;
 }
+body.lp-model .features {
+  background-color: #ffffff;
+  background-image: url("../images/features.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body.lp-model .features .container {
+  padding-bottom: 80px;
+  padding-top: 60px;
+}
+body.lp-model .features .container h3 {
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  body.lp-model .features .container h3 {
+    font-size: 1.3rem;
+  }
+}
+body.lp-model .features .container .columns {
+  display: flex;
+  padding-top: 60px;
+}
+@media (max-width: 600px) {
+  body.lp-model .features .container .columns {
+    display: block;
+  }
+}
+body.lp-model .features .container .columns .column {
+  align-items: center;
+  display: flex;
+  flex-basis: 33.3333%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  body.lp-model .features .container .columns .column {
+    margin-bottom: 40px;
+  }
+}
+body.lp-model .features .container .columns .column h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+body.lp-model .features .container .columns .column img {
+  display: inline-block;
+  max-width: 80px;
+}
+body.lp-model .features .container .columns .column span {
+  font-weight: 200;
+}
+@media (max-width: 600px) {
+  body.lp-model .features .container .columns .column span {
+    max-width: 360px;
+  }
+}
 body.lp-model .contact {
   background-color: #f5f5f5;
   background-image: url("../images/seller.png");
