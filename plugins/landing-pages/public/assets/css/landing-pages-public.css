@@ -280,6 +280,63 @@ body.lp-model .school .wrap-slider .glide li img {
   height: auto;
   max-width: 100%;
 }
+body.lp-model .shipping {
+  background-color: #808080;
+  background-image: url("../images/shipping.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+@media (max-width: 783px) {
+  body.lp-model .shipping {
+    background-position: 75% center;
+  }
+}
+body.lp-model .shipping .container {
+  color: #FFFFFF;
+  padding-bottom: 140px;
+  padding-top: 100px;
+}
+body.lp-model .shipping .container .description {
+  max-width: 500px;
+}
+@media (max-width: 600px) {
+  body.lp-model .shipping .container .description {
+    max-width: 100%;
+  }
+}
+body.lp-model .shipping .container .description .icon {
+  max-width: 100px;
+}
+@media (max-width: 600px) {
+  body.lp-model .shipping .container .description .icon {
+    max-width: 80px;
+  }
+}
+body.lp-model .shipping .container .description h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+@media (max-width: 783px) {
+  body.lp-model .shipping .container .description h2 {
+    font-size: 3rem;
+  }
+}
+body.lp-model .shipping .container .description span {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+@media (max-width: 783px) {
+  body.lp-model .shipping .container .description span {
+    font-size: 1.2rem;
+  }
+}
+body.lp-model .shipping .container .description .button {
+  display: table;
+}
 body.lp-model .contact {
   background-color: #f5f5f5;
   background-image: url("../images/seller.png");

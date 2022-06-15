@@ -73,6 +73,17 @@
 		</div>
 	</div>
 
+	<div id="frete" class="shipping">
+		<div class="container">
+			<div class="description">
+				<img class="icon" src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/icon-shipping.png" alt="Logística com frota própria">
+				<h2>Logística com frota própria</h2>
+				<span>Atendemos todo o território nacional com <b>agilidade</b>, <b>eficiência</b> e <b>segurança</b>.</span>
+				<a class="button" href="#whatsapp">Consulte nossos prazos</a>
+			</div>
+		</div>
+	</div>
+
 	<div id="contato" class="contact">
 		<div class="container">
 			<h2>Fale com nossa equipe</h2>
