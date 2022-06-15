@@ -84,6 +84,24 @@
 		</div>
 	</div>
 
+	<div id="clientes" class="customers">
+		<div class="container">
+			<h2>Clientes</h2>
+			<ul class="gallery">
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-gol.png" alt="GOL Linhas Aéreas Inteligentes"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-oab.png" alt="OAB | Ordem dos Advogados do Brasil"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-kroton.jpg" alt="Kroton Educacional"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-estacio.png" alt="Faculdade Estácio - Graduação Estácio"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-anhanguera.png" alt="Anhanguera Educacional"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-uniasselvi.png" alt="UNIASSELVI - Graduação e pós-graduação presencial e EAD"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-trasmontano.png" alt="Trasmontano Saúde"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-shark.jpg" alt="Grupo SHARK"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-spdm.jpg" alt="SPDM - Associação Paulista para o Desenvolvimento da Medicina"></li>
+				<li><img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/logo-pitagoras.jpg" alt="Faculdade Pitágoras"></li>
+			</ul>
+		</div>
+	</div>
+
 	<div id="contato" class="contact">
 		<div class="container">
 			<h2>Fale com nossa equipe</h2>
