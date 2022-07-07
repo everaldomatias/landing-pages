@@ -99,6 +99,11 @@ class Landing_Pages_Public {
 
 		wp_enqueue_script( 'glidejs', plugin_dir_url( __FILE__ ) . 'js/glide.min.js', array(), $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/landing-pages-public.js', array( 'jquery' ), $this->version, false );
+		wp_localize_script( $this->plugin_name, 'contact_form_object', [
+			'ajax_url'  => admin_url( 'admin-ajax.php' ),
+			'seller_id' => get_the_ID(),
+			'nonce'     => wp_create_nonce( 'contact-form-object-nonce' )
+		] );
 
 	}
 
@@ -151,6 +156,68 @@ class Landing_Pages_Public {
 		}
 
 		return $template;
+	}
+
+	/**
+	 * Get ajax form
+	 */
+
+	public function send_contact_form() {
+
+		if ( isset( $_POST['action'] ) && 'send_contact_form' !== $_POST['action'] )
+			return;
+
+		$nonce = $_POST['nonce'];
+
+		if ( ! wp_verify_nonce( $nonce, 'contact-form-object-nonce' ) ) {
+			wp_send_json_error( __( 'Security check', 'landing-pages' ) ); 
+		} else {
+			$name = ( isset( $_POST['name'] ) ) ? sanitize_text_field( $_POST['name'] ) : '';
+			$email = ( isset( $_POST['email'] ) ) ? sanitize_email( $_POST['email'] ) : '';
+			$whatsapp = ( isset( $_POST['whatsapp'] ) ) ? sanitize_text_field( $_POST['whatsapp'] ) : '';
+			$message = ( isset( $_POST['message'] ) ) ? sanitize_textarea_field( $_POST['message'] ) : '';
+			$seller = ( isset( $_POST['seller'] ) ) ? sanitize_text_field( $_POST['seller'] ) : '';
+
+			if ( empty( $name ) || empty( $email ) ) {
+				wp_send_json_error( __( 'Verifique seu nome e e-mail e tente novamente.', 'landing-pages' ) ); 
+			}
+
+			date_default_timezone_set( 'America/Sao_Paulo' );
+
+			$to = 'emailprincipal@exemplo.io';
+			$subject = __( '[Contato pelo Site]' );
+			$header = array('Content-Type: text/html; charset=UTF-8');
+
+			$headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
+			$headers[] = 'From: ' . $name . ' <' . $email . '>';
+			$headers[] = 'Cc: outroemail@exemplo.io';
+
+			$body = '<strong>' . $subject . '</strong><br>';
+			
+			$body .= '<strong>De: </strong>' . $name . '<br>';
+			$body .= '<strong>E-mail: </strong>' . $email . '<br>';
+			$body .= '<strong>WhatsApp: </strong>' . $whatsapp . '<br>';
+			$body .= '<strong>Mensagem: </strong><br>';
+			$body .= $message . '<br>';
+			$body .= '<br>';
+			$body .= '<br>';
+			$body .= '--<br>';
+			$body .= '<strong>Data: </strong>' . date( 'd \d\e M \d\e Y \à\s H:i' ) . '<br>';
+			$body .= '<strong>Vendedor: </strong>' . $seller . '<br>';
+			$body .= '<br>';
+
+			$content_type = function() { return 'text/html'; };
+			add_filter( 'wp_mail_content_type', $content_type );
+			$send_email = wp_mail( $to, $subject . ' - ' . $name , $body, $header );
+			remove_filter( 'wp_mail_content_type', $content_type );
+
+			if ( $send_email ) {
+				wp_send_json_success( __( 'Contato enviado com sucesso, nossa equipe entrará em contato em breve.', 'landing-pages' ) );
+			} else {
+				wp_send_json_error( __( 'Houve algum erro interno, tente novamente mais tarde ou fale conosco pelo WhatsApp.', 'landing-pages' ) ); 
+			}
+		}
+		die;
 	}
 
 }

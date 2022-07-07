@@ -396,6 +396,102 @@ body.lp-model {
         }
     }
 
+    .form {
+        background-color: #cfcfcf;
+
+        .container {
+            color: #333333;
+            padding-bottom: 140px;
+            padding-top: 80px;
+
+            h2 {
+                font-family: 'Outfit', sans-serif;
+                font-size: 4rem;
+                font-weight: 900;
+                line-height: 1;
+
+                @media (max-width: 783px) {
+                    font-size: 3rem;
+                }
+
+                @media (max-width: 600px) {
+                    max-width: 100%;
+                }
+            }
+
+            span {
+                font-size: 1.5rem;
+                font-weight: 200;
+
+                @media (max-width: 783px) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            form {
+                margin-bottom: 15px;
+                margin-top: 15px;
+
+                input,
+                textarea {
+                    border: 0;
+                    border-radius: 7px;
+                    display: block;
+                    font-size: 16px;
+                    padding: 15px;
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+
+                textarea {
+                    min-height: 100px;
+                }
+
+                .button {
+                    background-color: #333333;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: auto 60%;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #555555;
+                    }
+
+                    &.loading {
+                        background-image: url('../images/loading.gif');
+                        text-indent: -99999px;
+                    }
+                }
+            }
+
+            .response-form {
+                background-color: white;
+                border-radius: 7px;
+                border: 1px solid transparent;
+                display: none;
+                line-height: 1;
+                padding: 15px;
+                text-align: center;
+                width: 100%;
+
+                &.show {
+                    display: block;
+                }
+
+                &.form-error {
+                    border-color: red;
+                    background-color: rgb(255, 197, 197);
+                }
+
+                &.form-success {
+                    background-color: rgb(204, 252, 204);
+                    border-color: darkgreen;
+                }
+            }
+        }
+    }
+
     // Logged in
     &.logged-in {
         .main-header {

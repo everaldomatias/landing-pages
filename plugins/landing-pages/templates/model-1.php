@@ -110,6 +110,22 @@
 		</div>
 	</div>
 
+	<div id="formulario" class="form">
+		<div class="container">
+			<h2>Nos envie uma mensagem</h2>
+			<span>Nossa equipe responderá o mais breve possível, esclarecendo suas dúvidas ou atendendo sua solicitação.</span>
+			<form action="<?php the_permalink(); ?>" method="post" class="ajax" enctype="multipart/form-data">
+				<input type="text" id="nome" name="nome" placeholder="Nome*" required>
+				<input type="email" id="email" name="email" placeholder="E-mail*" required>
+				<input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp (com DDD)*" required>
+				<textarea name="mensagem" id="message" placeholder="Mensagem*" required></textarea>
+				<input type="hidden" id="seller" name="seller" value="<?php the_title(); ?>">
+				<input type="submit" class="button submit-contact" id="submit-contact" value="Enviar mensagem">
+			</form>
+			<div class="response-form"></div>
+		</div>
+	</div>
+
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
