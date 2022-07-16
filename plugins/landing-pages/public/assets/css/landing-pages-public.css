@@ -81,7 +81,7 @@ body.lp-model .button {
   border-radius: 10px;
   color: #FFFFFF;
   font-size: 1.5rem;
-  margin-top: 15px;
+  margin-top: 30px;
   padding: 15px 30px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -124,6 +124,17 @@ body.lp-model .hero {
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 10%;
+}
+@media (max-width: 783px) {
+  body.lp-model .hero {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 783px) {
+  body.lp-model .hero .container {
+    padding-top: 126px;
+  }
 }
 body.lp-model .hero h1 {
   font-family: "Outfit", sans-serif;
@@ -366,6 +377,12 @@ body.lp-model .customers .container .gallery {
   grid-template-columns: repeat(auto-fit, minmax(160px, auto));
   margin-top: 80px;
   padding-left: 0;
+}
+@media (max-width: 600px) {
+  body.lp-model .customers .container .gallery {
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+  }
 }
 body.lp-model .customers .container .gallery li {
   align-items: center;
