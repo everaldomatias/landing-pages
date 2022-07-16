@@ -8,6 +8,35 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+<?php
+// Get values and data
+
+$seller_id        = get_the_ID();
+$email            = get_post_meta( $seller_id, 'email_lp', true );
+$whatsapp         = get_post_meta( $seller_id, 'whatsapp_lp', true );
+$whatsapp_message = get_post_meta( $seller_id, 'whatsapp_message_lp', true );
+
+$whatsapp_link = '';
+
+if ( ! empty( $whatsapp ) ) {
+	if ( lp_what_the_browser( 'Firefox' ) ) {
+		$whatsapp_link = 'https://web.whatsapp.com/send?phone=';
+	} else {
+		$whatsapp_link = 'https://wa.me/';
+	}
+	
+	$whatsapp_link .= esc_attr( $whatsapp );
+	
+	if ( ! empty( $whatsapp_message ) ) {
+		$whatsapp_message = urlencode( $whatsapp_message );
+		$whatsapp_message = str_replace( '+', '%20', $whatsapp_message );
+		$whatsapp_link .= '?text=' . esc_attr( $whatsapp_message );
+	}
+}
+
+?>
+
 <div id="page" class="site">
 	<header class="main-header">
 		<div class="container">
@@ -19,7 +48,7 @@
 		<div class="container">
 			<h1>Seu escritório completo em um só lugar.</h1>
 			<span>Tam sit amet tellus in eros faucibus tempor quis sed ante. Nam id iaculis leo. Aliquam erat volutpat. Integer fringilla dui vel quam sodales suscipit. Proin aliquam pharetra pretium. Phasellus tincidunt elit ut</span>
-			<a class="button" href="#contato">Quero saber mais >></a>
+			<a class="button" href="#formulario">Quero saber mais >></a>
 		</div>
 	</div>
 
@@ -79,7 +108,11 @@
 				<img class="icon" src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/icon-shipping.png" alt="Logística com frota própria">
 				<h2>Logística com frota própria</h2>
 				<span>Atendemos todo o território nacional com <b>agilidade</b>, <b>eficiência</b> e <b>segurança</b>.</span>
-				<a class="button" href="#whatsapp">Consulte nossos prazos</a>
+				<?php if ( $whatsapp_link ) : ?>
+					<a class="button" target="_blank" href="<?php echo esc_url( $whatsapp_link ); ?>">Consulte nossos prazos</a>
+				<?php else : ?>
+					<a class="button" href="#formulario">Consulte nossos prazos</a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
@@ -106,7 +139,11 @@
 		<div class="container">
 			<h2>Fale com nossa equipe</h2>
 			<span>Com apenas um clique entre em contato com nossos atendentes para dúvidas ou orçamentos.</span>
-			<a class="button" href="#whatsapp">WhatsApp</a>
+			<?php if ( $whatsapp_link ) : ?>
+				<a class="button" target="_blank" href="<?php echo esc_url( $whatsapp_link ); ?>">WhatsApp</a>
+			<?php else : ?>
+				<a class="button" href="#formulario">Consulte nossos prazos</a>
+			<?php endif; ?>
 		</div>
 	</div>
 
@@ -138,6 +175,14 @@
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- #content -->
+
+	<?php if ( $whatsapp_link ) : ?>
+		<div class="whatsapp-button">
+            <a target="_blank" href="<?php echo $whatsapp_link; ?>">
+                <img src="<?php echo LANDING_PAGES_PATH; ?>public/assets/images/whatsapp.svg" />
+            </a>
+        </div>
+	<?php endif; ?>
 
 </div><!-- #page -->
 

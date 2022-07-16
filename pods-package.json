@@ -1,12 +1,12 @@
 {
     "meta": {
-        "version": "2.8.18",
-        "build": 1655051202
+        "version": "2.8.23",
+        "build": 1657982758
     },
     "pods": [
         {
             "name": "seller_lp",
-            "id": 7,
+            "id": 5,
             "label": "Vendedores",
             "description": "",
             "type": "post_type",
@@ -43,7 +43,7 @@
             "groups": [
                 {
                     "name": "selle_info",
-                    "id": 8,
+                    "id": 6,
                     "label": "Informa\u00e7\u00f5es do vendedor",
                     "description": "",
                     "weight": 0,
@@ -53,7 +53,7 @@
                     "fields": [
                         {
                             "name": "model_lp",
-                            "id": 9,
+                            "id": 7,
                             "label": "Modelo da Landing Page",
                             "description": "Selecione o modelo de Landing Page que esse vendedor usar\u00e1",
                             "weight": 0,
@@ -81,6 +81,51 @@
                             "pick_post_status": "publish",
                             "pick_post_author": "0",
                             "pick_custom": "model_1|Modelo 1\nmodel_2|Modelo 2\nmodel_3|Modelo 3\nmodel_4|Modelo 4"
+                        },
+                        {
+                            "name": "email_lp",
+                            "id": 9,
+                            "label": "E-mail",
+                            "description": "Adicione o e-mail do vendedor",
+                            "weight": 1,
+                            "type": "email",
+                            "sister_id": "-- Selecione Um --",
+                            "required": "0",
+                            "email_max_length": "255",
+                            "email_html5": "0",
+                            "roles_allowed": "administrator",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1"
+                        },
+                        {
+                            "name": "whatsapp_lp",
+                            "id": 10,
+                            "label": "WhatsApp",
+                            "description": "Adicione o WhatsApp de atendimento do vendedor",
+                            "weight": 2,
+                            "type": "text",
+                            "sister_id": "-- Selecione Um --",
+                            "required": "0",
+                            "text_allowed_html_tags": "strong em a ul ol li b i",
+                            "text_max_length": "255",
+                            "roles_allowed": "administrator",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1"
+                        },
+                        {
+                            "name": "whatsapp_message_lp",
+                            "id": 12,
+                            "label": "Mensagem inicial do WhatsApp",
+                            "description": "Adicione uma mensagem inicial para iniciar a conversa pelo WhatsApp",
+                            "weight": 3,
+                            "type": "text",
+                            "sister_id": "-- Selecione Um --",
+                            "required": "0",
+                            "text_allowed_html_tags": "strong em a ul ol li b i",
+                            "text_max_length": "255",
+                            "roles_allowed": "administrator",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1"
                         }
                     ]
                 }

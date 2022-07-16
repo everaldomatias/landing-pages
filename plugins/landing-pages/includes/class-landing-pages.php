@@ -112,6 +112,11 @@ class Landing_Pages {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-landing-pages-i18n.php';
 
 		/**
+		 * The helper functions of the plugin.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-landing-pages-functions.php';
+
+		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-landing-pages-admin.php';
