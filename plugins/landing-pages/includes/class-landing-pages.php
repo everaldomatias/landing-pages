@@ -179,6 +179,9 @@ class Landing_Pages {
 		$this->loader->add_filter( 'body_class', $plugin_public, 'lp_body_class', 99 );
 		$this->loader->add_filter( 'template_include', $plugin_public, 'lp_template_include', 99 );
 
+		$this->loader->add_filter( 'post_type_link', $plugin_public, 'lp_cpt_remove_slug', 999, 3 );
+		$this->loader->add_action( 'pre_get_posts', $plugin_public, 'lp_parse_request' );
+
 		$this->loader->add_action( 'wp_ajax_send_contact_form', $plugin_public, 'send_contact_form' );
 		$this->loader->add_action( 'wp_ajax_nopriv_send_contact_form', $plugin_public, 'send_contact_form' );
 

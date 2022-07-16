@@ -158,6 +158,27 @@ class Landing_Pages_Public {
 		return $template;
 	}
 
+	public function lp_cpt_remove_slug( $permalink, $post, $leavename ) {
+
+		if ( 'seller_lp' === get_post_type( $post ) && strpos( $permalink, '/seller-lp' ) ) {
+			$permalink = str_replace( '/seller-lp', '', $permalink );
+			return $permalink;
+		}
+
+		return $permalink;
+
+	}
+
+	public function lp_parse_request( $query ) {
+		if ( ! $query->is_main_query() || 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
+			return;
+		}
+	
+		if ( ! empty( $query->query['name'] ) ) {
+			$query->set( 'post_type', array( 'post', 'seller_lp', 'page' ) );
+		}
+	}
+
 	/**
 	 * Get ajax form
 	 */
