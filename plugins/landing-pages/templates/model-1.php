@@ -76,6 +76,24 @@ if ( ! empty( $whatsapp ) ) {
 		</div>
 	</div>
 
+	<div id="produtos" class="products">
+		<div class="container">
+			<h2>Produtos</h2>
+			<span>Tam sit amet tellus in eros faucibus tempor quis sed ante. Nam id iaculis leo. Aliquam erat volutpat. Integer fringilla dui vel quam sodales suscipit.s</span>
+		</div>
+
+		<div class="grid grid-gallery">
+			<?php
+			$gallery_array = range( 0, 22 );
+			shuffle( $gallery_array );
+			$gallery_array = array_slice( $gallery_array, 0, 8 );
+
+			foreach ( $gallery_array as $item ) : ?>
+				<div class="item" style="background-image: url(<?php echo LANDING_PAGES_PATH . 'public/assets/images/produtos/' . $item . '.jpg' ; ?>)"></div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+
 	<div id="escola" class="school">
 		<div class="container">
 			<h2>Móveis para escola</h2>
