@@ -62,6 +62,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body.lp-model {
   background-color: rgb(105, 105, 105);
   font-family: "Outfit", sans-serif;
