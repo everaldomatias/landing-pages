@@ -84,9 +84,9 @@ if ( ! empty( $whatsapp ) ) {
 
 		<div class="grid grid-gallery">
 			<?php
-			$gallery_array = range( 0, 22 );
+			$gallery_array = range( 1, 22 );
 			shuffle( $gallery_array );
-			$gallery_array = array_slice( $gallery_array, 0, 8 );
+			$gallery_array = array_slice( $gallery_array, 1, 8 );
 
 			foreach ( $gallery_array as $item ) : ?>
 				<div class="item" style="background-image: url(<?php echo LANDING_PAGES_PATH . 'public/assets/images/produtos/' . $item . '.jpg' ; ?>)"></div>

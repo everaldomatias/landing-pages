@@ -64,7 +64,7 @@
 				// Reseta o formulário após envio
 				setTimeout(function() { 
 					$(".response-form").removeClass("show form-success form-error");
-				}, 5000);
+				}, 7000);
 			})
 		});
 	});

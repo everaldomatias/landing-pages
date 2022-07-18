@@ -548,6 +548,8 @@ body.lp-model {
                     background-position: center;
                     background-size: auto 60%;
                     cursor: pointer;
+                    min-width: 200px;
+                    width: auto;
 
                     &:hover {
                         background-color: #555555;
@@ -556,6 +558,7 @@ body.lp-model {
                     &.loading {
                         background-image: url('../images/loading.gif');
                         text-indent: -99999px;
+                        width: 50px;
                     }
                 }
             }

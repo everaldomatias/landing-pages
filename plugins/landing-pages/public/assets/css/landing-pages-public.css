@@ -558,6 +558,8 @@ body.lp-model .form .container form .button {
   background-position: center;
   background-size: auto 60%;
   cursor: pointer;
+  min-width: 200px;
+  width: auto;
 }
 body.lp-model .form .container form .button:hover {
   background-color: #555555;
@@ -565,6 +567,7 @@ body.lp-model .form .container form .button:hover {
 body.lp-model .form .container form .button.loading {
   background-image: url("../images/loading.gif");
   text-indent: -99999px;
+  width: 50px;
 }
 body.lp-model .form .container .response-form {
   background-color: white;
