@@ -257,6 +257,11 @@ body.lp-model .products .container span {
   margin-bottom: 45px;
   text-align: center;
 }
+@media (max-width: 600px) {
+  body.lp-model .products .container span {
+    font-size: 1.3rem;
+  }
+}
 body.lp-model .products .grid-gallery {
   display: grid;
   grid-template-rows: repeat(4, 180px);
@@ -265,7 +270,8 @@ body.lp-model .products .grid-gallery {
 }
 @media (max-width: 1030px) {
   body.lp-model .products .grid-gallery {
-    background-color: red;
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(2, 1fr);
     padding-left: 15px;
     padding-right: 15px;
   }

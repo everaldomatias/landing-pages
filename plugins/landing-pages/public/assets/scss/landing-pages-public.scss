@@ -217,6 +217,10 @@ body.lp-model {
                 font-weight: 200;
                 margin-bottom: 45px;
                 text-align: center;
+
+                @media (max-width: 600px) {
+                    font-size: 1.3rem;
+                }
             }
         }
 
@@ -227,7 +231,8 @@ body.lp-model {
             grid-gap: 15px;
 
             @media (max-width: 1030px) {
-                background-color: red;
+                grid-template-rows: repeat(4, 150px);
+                grid-template-columns: repeat(2, 1fr);
                 padding-left: 15px;
                 padding-right: 15px;
             }
